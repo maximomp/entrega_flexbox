@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Agency - Flexbox Landing Page</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
       <div class="logo">DIGITAL AGENCY</div>
+      <div class="menu-icon">
+        <img src="media/img/menu-icon.png" alt="Menu Icon" />
+      </div>
       <nav class="nav">
         <a href="#home">home</a>
         <a href="#about">about</a>
@@ -16,6 +25,7 @@
         <a href="#contact">contact</a>
       </nav>
     </header>
+
     <main class="main">
       <section class="hero" id="home">
         <div class="hero-content">
@@ -24,7 +34,7 @@
             Digital Agency Is Your Online Team Management Tool That Easy And
             Prompt.
           </p>
-          <button>CONTACT US</button>
+          <a href="#contact"><button>CONTACT US</button></a>
         </div>
         <div class="hero-img">
           <img
@@ -44,13 +54,7 @@
       </section>
 
       <section class="services" id="about">
-        <div class="service">
-          <div class="service-img service-img1">
-            <img
-              src="media/img/branding.png"
-              alt="Branding and Graphic Design"
-            />
-          </div>
+        <div class="service rowReverse">
           <div>
             <h2>Branding & Design System</h2>
             <p>
@@ -58,43 +62,76 @@
               previewing visual layout and mockups
             </p>
           </div>
+          <div class="service-img service-img1">
+            <img
+              src="media/img/branding.png"
+              alt="Branding and Graphic Design"
+            />
+          </div>
         </div>
+
         <div class="service">
-          <div class="service-img service-img2"></div>
           <div>
             <h2>Custome & Plugin Development</h2>
             <p>Previewing visual layout and mockups for digital products.</p>
+          </div>
+          <div class="service-img service-img1">
+            <img
+              src="media/img/customize.png"
+              alt="Custome & Plugin Development"
+            />
           </div>
         </div>
       </section>
 
       <section class="testimonials" id="testimonials">
+        <h2>Testimonials</h2>
         <h3>Read What Other Have To Say</h3>
         <div class="testimonials-list">
           <div class="testimonial">
-            <div class="testimonial-img testimonial-img1"></div>
+            <img
+              src="media/img/testimonial-western-man.png"
+              alt="testimonial western man"
+            />
+
             <div class="testimonial-info">
               <strong>Andrew Rathore</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                ullamcorper scelerisque mi, in malesuada felis malesuada vel.
+              </p>
             </div>
           </div>
           <div class="testimonial">
-            <div class="testimonial-img testimonial-img2"></div>
+            <img
+              src="media/img/testimonial2.png"
+              alt="testimonial western man"
+            />
+
             <div class="testimonial-info">
               <strong>Vera Duncan</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                ullamcorper scelerisque mi, in malesuada felis malesuada vel.
+              </p>
             </div>
           </div>
           <div class="testimonial">
-            <div class="testimonial-img testimonial-img3"></div>
+            <img
+              src="media/img/testimonial3.png"
+              alt="testimonial western man"
+            />
             <div class="testimonial-info">
               <strong>Mark Smith</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                ullamcorper scelerisque mi, in malesuada felis malesuada vel.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section class="cta" id="contact">
+      <section class="cta rowReverse" id="contact">
         <div class="cta-content">
           <h2>Be a part of the next big thing</h2>
           <p>
@@ -103,9 +140,12 @@
           </p>
           <button>Contact Us</button>
         </div>
-        <div class="cta-img"></div>
+        <div class="cta-image">
+          <img src="media/img/contact.png" alt="contact image" />
+        </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="footer-section">
         <h4>Digital Agency</h4>
@@ -139,5 +179,6 @@
         </ul>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
