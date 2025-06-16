@@ -1,3 +1,6 @@
+:root {
+  --zoom-font-offset: 0rem;
+}
 /* Reset básico */
 * {
   margin: 0;
@@ -28,7 +31,7 @@ body {
   background: transparent;
   margin-bottom: 4.5rem;
   box-shadow: none;
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 10vw;
   z-index: 1000;
@@ -46,7 +49,7 @@ body {
 }
 .logo {
   font-weight: bold;
-  font-size: 1.7vw;
+  font-size: clamp(1rem, 1.7vw + var(--zoom-font-offset), 3rem);
   letter-spacing: 0%;
   font-weight: bold;
   text-transform: uppercase;
@@ -62,7 +65,7 @@ body {
   color: #222;
   font-weight: 500;
   transition: color 0.2s;
-  font-size: 1.55vw;
+  font-size: clamp(1rem, 1.55vw + var(--zoom-font-offset), 3rem);
 }
 .nav a:hover {
   color: #2563eb;
@@ -76,7 +79,6 @@ body {
   gap: 3.5vw;
   padding: 0 10vw;
   position: relative;
-  top: 10vw;
 }
 
 /* Hero section styles */
@@ -95,7 +97,7 @@ body {
   gap: 3vw;
 }
 .hero-content h1 {
-  font-size: clamp(1rem, 4.5vw, 6rem);
+  font-size: clamp(1rem, 4.5vw + var(--zoom-font-offset), 12rem);
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -1px;
@@ -104,8 +106,7 @@ body {
   white-space: pre-line;
 }
 .hero-content p {
-  font-size: clamp(1rem, 1.45vw, 3rem);
-  color: #555;
+  font-size: clamp(1rem, 1.45vw + var(--zoom-font-offset), 3rem);
 }
 .hero-content button,
 .cta-content button {
@@ -114,7 +115,7 @@ body {
   border: none;
   padding: 1.3vw 3vw;
   border-radius: 0.9vw;
-  font-size: clamp(1rem, 1.3vw, 3rem);
+  font-size: clamp(1rem, 1.3vw + var(--zoom-font-offset), 3rem);
   cursor: pointer;
   transition: background 0.2s;
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
@@ -154,7 +155,7 @@ body {
   padding: 2vw 6vw;
 }
 .partners > p {
-  font-size: 1.3vw;
+  font-size: clamp(1rem, 1.3vw + var(--zoom-font-offset), 3rem);
   color: #667085;
   margin-bottom: 1.2vw;
   font-family: "Inter", sans-serif;
@@ -171,7 +172,7 @@ body {
   border-radius: 0.8vw;
 }
 .partners-logos span {
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 1.2vw + var(--zoom-font-offset), 3rem);
   color: #555;
   font-weight: 600;
   max-width: 15vw;
@@ -212,12 +213,12 @@ body {
   display: block;
 }
 .service > div > h2 {
-  font-size: 3.5vw;
+  font-size: clamp(1rem, 3.5vw + var(--zoom-font-offset), 12rem);
   margin-bottom: 3vw;
   margin-top: 6.5vw;
 }
 .service > div > p {
-  font-size: 1.4vw;
+  font-size: clamp(1rem, 1.4vw + var(--zoom-font-offset), 3rem);
   font-weight: 100;
   text-transform: capitalize;
   color: #667085;
@@ -231,7 +232,7 @@ body {
   margin: 0 0 2.5rem 0;
 }
 .testimonials > h2 {
-  font-size: 1.3vw;
+  font-size: clamp(1rem, 1.3vw + var(--zoom-font-offset), 3rem);
   font-weight: 400;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -240,7 +241,7 @@ body {
   text-transform: uppercase;
 }
 .testimonials h3 {
-  font-size: 4vw;
+  font-size: clamp(1.5rem, 4vw + var(--zoom-font-offset), 4rem);
   margin-bottom: 2.5vw;
   padding-left: 18vw;
   padding-right: 18vw;
@@ -263,11 +264,11 @@ body {
   gap: 1.1vw;
 }
 .testimonial-info > strong {
-  font-size: clamp(1rem, 1.5vw, 2.5rem);
+  font-size: clamp(1rem, 1.5vw + var(--zoom-font-offset), 2.5rem);
   font-weight: 100;
 }
 .testimonial-info > p {
-  font-size: clamp(1rem, 1.2vw, 2.4rem);
+  font-size: clamp(1rem, 1.2vw + var(--zoom-font-offset), 2.4rem);
   line-height: 130%;
   margin-top: 3vw;
   margin-bottom: 2vw;
@@ -311,14 +312,15 @@ body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 1vw;
-  font-weight: 600;
+  font-size: clamp(1rem, 1.4vw + var(--zoom-font-offset), 2.4rem);
+  font-weight: 300;
+  line-height: 157.5%;
 }
 .cta-content > h2 {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: clamp(1.5rem, 4vw, 6rem);
+  font-size: clamp(1.5rem, 4vw + var(--zoom-font-offset), 6rem);
   font-weight: bold;
   line-height: 100%;
 }
@@ -354,13 +356,14 @@ body {
   padding: 2.5rem 6vw 2rem 6vw;
   border-radius: 2rem 2rem 0 0;
   margin-top: 2.5rem;
+  position: relative;
 }
 .footer-section {
   min-width: 180px;
 }
 .footer-section h4 {
   margin-bottom: 0.9rem;
-  font-size: 1.13rem;
+  font-size: clamp(1rem, 1.13vw + var(--zoom-font-offset), 2.4rem);
 }
 .footer-section ul {
   list-style: none;
@@ -369,7 +372,14 @@ body {
 .footer-section li {
   margin-bottom: 0.5rem;
   color: #555;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1vw + var(--zoom-font-offset), 2.4rem);
+}
+.footer-section li a {
+  text-decoration: none;
+  color: #272d38;
+}
+.footer-section li a:hover {
+  color: #2563eb;
 }
 
 /* transition styles */
@@ -395,6 +405,8 @@ body {
     transform: translate3d(4px, 0, 0);
   }
 }
+
+/* Responsive styles  for 1024px and below */
 @media (max-width: 1024px) {
   .service {
     flex: 1 1 100% !important;
@@ -422,11 +434,11 @@ body {
     margin-bottom: 8vw;
   }
   .testimonial-info > strong {
-    font-size: clamp(1rem, 4vw, 8rem);
+    font-size: clamp(1rem, 4vw + var(--zoom-font-offset), 8rem);
     font-weight: 100;
   }
   .testimonial-info > p {
-    font-size: clamp(1rem, 3.2vw, 6rem);
+    font-size: clamp(1rem, 3.2vw + var(--zoom-font-offset), 6rem);
     line-height: 130%;
     margin-top: 6vw;
     margin-bottom: 6vw;
@@ -450,7 +462,7 @@ body {
     align-items: center;
   }
   .testimonials > h2 {
-    font-size: 2.6vw;
+    font-size: clamp(1rem, 2.6vw + var(--zoom-font-offset), 16rem);
     font-weight: 400;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -459,7 +471,7 @@ body {
     text-transform: uppercase;
   }
   .testimonials h3 {
-    font-size: 8vw;
+    font-size: clamp(1.5rem, 8vw + var(--zoom-font-offset), 16rem);
     margin-bottom: 2.8vw;
     padding-left: 0;
     padding-right: 0;
@@ -473,18 +485,18 @@ body {
     display: block;
   }
   .service > div > h2 {
-    font-size: 8.5vw;
+    font-size: clamp(1rem, 8.5vw + var(--zoom-font-offset), 12rem);
     margin-bottom: 9vw;
     margin-top: 6.5vw;
   }
   .service > div > p {
-    font-size: clamp(1.5rem, 3.6vw, 5rem);
+    font-size: clamp(1.5rem, 3.6vw + var(--zoom-font-offset), 5rem);
     font-weight: 100;
     text-transform: capitalize;
     color: #667085;
   }
   .hero-content h1 {
-    font-size: clamp(2rem, 8vw, 9rem);
+    font-size: clamp(2rem, 8vw + var(--zoom-font-offset), 9rem);
     max-width: 100%;
   }
   .hero-content {
@@ -494,29 +506,37 @@ body {
     min-width: 100%;
   }
   .hero-content p {
-    font-size: clamp(1rem, 4vw, 5rem);
+    font-size: clamp(1rem, 4vw + var(--zoom-font-offset), 5rem);
     color: #555;
   }
   .hero-content button {
     padding: 2.3vw 6vw;
-    font-size: clamp(1.5rem, 3.5vw, 5rem);
+    font-size: clamp(1.5rem, 3.5vw + var(--zoom-font-offset), 6rem);
     align-self: center;
     border-radius: 1.5vw;
   }
 
+  .cta > div {
+    padding: 10vw 4vw;
+  }
+
   .cta-content h2 {
     text-align: center;
+    font-size: clamp(1.5rem, 9vw + var(--zoom-font-offset), 6rem);
   }
 
   .cta-content > p {
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: clamp(1rem, 4vw + var(--zoom-font-offset), 2.4rem);
+    font-weight: 300;
+    line-height: 157.5%;
+    margin: 8vw 0vw;
   }
 
   .cta-content button {
     padding: 2.3vw 6vw;
-    font-size: clamp(1.5rem, 3.5vw, 5rem);
+
+    font-size: clamp(1.5rem, 3.5vw + var(--zoom-font-offset), 6rem);
     align-self: center;
     border-radius: 1.5vw;
   }
@@ -531,6 +551,23 @@ body {
   }
   .footer {
     padding: 1rem 2vw;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-section {
+    min-width: 180px;
+    margin-top: 20vw;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+  }
+  .footer-section > h4 {
+    margin-bottom: 10vw;
+    font-size: clamp(1rem, 5.5vw + var(--zoom-font-offset), 8.4rem);
+  }
+  .footer-section > ul > li {
+    font-size: clamp(1rem, 5vw + var(--zoom-font-offset), 8.4rem);
+    padding: 6vw 0 0 0;
+    font-weight: 300;
   }
   .hero-content {
     align-items: center;
@@ -543,7 +580,7 @@ body {
     padding: 2vw 0vw;
   }
   .partners > p {
-    font-size: 3.3vw;
+    font-size: clamp(1rem, 3.3vw + var(--zoom-font-offset), 8rem);
     color: #667085;
     margin-bottom: 2.5vw;
     font-weight: 300;
@@ -565,12 +602,19 @@ body {
   /* Header styles for mobile */
   .header {
     padding: clamp(30px, 15vw, 15vw) 4vw clamp(10px, 30vw, 1vw) 4vw;
+    position: relative;
+  }
+  .header-fixed {
     position: fixed;
+    padding: 4vw 4vw 4vw 4vw;
+    background: white;
+    height: 10vw;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
   }
 
   .logo {
     font-weight: bold;
-    font-size: clamp(1rem, 3vw, 4rem);
+    font-size: clamp(1rem, 3vw + var(--zoom-font-offset), 9rem);
     letter-spacing: 1px;
     font-weight: bold;
     text-transform: capitalize;
@@ -602,7 +646,7 @@ body {
     margin-right: auto;
     left: 1vw;
     text-align: center;
-    font-size: 3vw;
+    font-size: clamp(1rem, 3vw + var(--zoom-font-offset), 6rem);
     background: #f6f6f6;
     padding: 12vw 5vw;
     z-index: 999;
@@ -619,7 +663,7 @@ body {
     color: #222;
     font-weight: 500;
     transition: color 0.2s;
-    font-size: 5.55vw;
+    font-size: clamp(1rem, 3vw + var(--zoom-font-offset), 6rem);
   }
   .nav a:hover {
     color: #2563eb;
