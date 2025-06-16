@@ -71,3 +71,21 @@ Recordad que el Figma mostrado es solo un ejemplo, podéis crear la Landing Page
 - The mobile dropdown menu includes an animated opening effect.
 - Testimonial images have a rotation effect on interaction.
 - Contact buttons feature a shake animation on hover.
+
+---
+
+## ¿Cómo utilizar este repositorio?
+
+1. Clona o descarga este repositorio en tu equipo.
+2. Abre el archivo `index.html` en tu navegador para ver la landing page funcionando.
+
+No se requieren dependencias ni instalación adicional: todo funciona solo con HTML, CSS y JavaScript.
+
+---
+
+## How to use this repository?
+
+1. Clone or download this repository to your computer.
+2. Open the `index.html` file in your browser to see the landing page in action.
+
+No dependencies or extra installation required: everything works with just HTML, CSS, and JavaScript.
