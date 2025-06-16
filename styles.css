@@ -1,12 +1,13 @@
 :root {
   --zoom-font-offset: 0rem;
 }
-/* Reset básico */
+/* Reset  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: linear-gradient(
@@ -351,28 +352,32 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2.5rem;
-  background: #f1f5f9;
-  padding: 2.5rem 6vw 2rem 6vw;
+  gap: 2.5vw;
+  background: #f6f6f6;
+  padding: 6.5rem 6vw 2rem 6vw;
   border-radius: 2rem 2rem 0 0;
-  margin-top: 2.5rem;
+  margin-top: 2.5vw;
   position: relative;
 }
 .footer-section {
   min-width: 180px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
 }
 .footer-section h4 {
   margin-bottom: 0.9rem;
-  font-size: clamp(1rem, 1.13vw + var(--zoom-font-offset), 2.4rem);
+  font-size: clamp(1rem, 1.4vw + var(--zoom-font-offset), 2.4rem);
+  margin-bottom: 2.5vw;
 }
 .footer-section ul {
   list-style: none;
   padding-left: 0;
 }
 .footer-section li {
-  margin-bottom: 0.5rem;
   color: #555;
-  font-size: clamp(1rem, 1vw + var(--zoom-font-offset), 2.4rem);
+  font-size: clamp(1rem, 1.2vw + var(--zoom-font-offset), 2.4rem);
+  margin-top: 1.5vw;
+  font-weight: 300;
 }
 .footer-section li a {
   text-decoration: none;
@@ -380,6 +385,17 @@ body {
 }
 .footer-section li a:hover {
   color: #2563eb;
+}
+.footer-copy {
+  width: 100vw;
+
+  text-align: center;
+  font-size: clamp(1rem, 1.2vw + var(--zoom-font-offset), 2.4rem);
+  color: #555;
+  margin-top: 4vw;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  display: inline;
 }
 
 /* transition styles */
@@ -568,6 +584,17 @@ body {
     font-size: clamp(1rem, 5vw + var(--zoom-font-offset), 8.4rem);
     padding: 6vw 0 0 0;
     font-weight: 300;
+  }
+  .footer-copy {
+    width: 100vw;
+
+    text-align: center;
+    font-size: clamp(1rem, 3vw + var(--zoom-font-offset), 8rem);
+    color: #555;
+    margin-top: 20vw;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    display: inline;
   }
   .hero-content {
     align-items: center;
